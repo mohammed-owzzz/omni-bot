@@ -4,6 +4,16 @@
     --text-muted: #888;
     --accent: #a855f7;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-main);
@@ -14,10 +24,12 @@ body {
     display: flex;
     justify-content: center;
 }
+
 .container {
     max-width: 800px;
     width: 100%;
 }
+
 h1 {
     color: #ffffff;
     font-size: 2.2rem;
@@ -25,10 +37,12 @@ h1 {
     margin-bottom: 0.2rem;
     font-weight: normal;
 }
+
 .subtitle {
     color: var(--text-muted);
     font-size: 0.95rem;
 }
+
 .cursor {
     display: inline-block;
     width: 10px;
@@ -37,6 +51,7 @@ h1 {
     vertical-align: middle;
     animation: blink 1s step-end infinite;
 }
+
 @keyframes blink { 50% { opacity: 0; } }
 
 .social-links {
@@ -45,29 +60,35 @@ h1 {
     margin-top: 1.5rem;
     margin-bottom: 2rem;
 }
+
 .social-links a {
     display: inline-flex;
     border-bottom: none;
     animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) backwards;
 }
+
 .social-links a:nth-child(1) { animation-delay: 0.1s; }
 .social-links a:nth-child(2) { animation-delay: 0.2s; }
 .social-links a:nth-child(3) { animation-delay: 0.3s; }
 .social-links a:nth-child(4) { animation-delay: 0.4s; }
+
 .social-links svg {
     width: 24px;
     height: 24px;
     fill: var(--text-muted);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .social-links a:hover {
     border-bottom: none;
 }
+
 .social-links a:hover svg {
     fill: var(--accent);
     transform: scale(1.25) translateY(-3px);
     filter: drop-shadow(0 4px 8px rgba(168, 85, 247, 0.5));
 }
+
 @keyframes slideUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -81,6 +102,7 @@ h1 {
     padding-bottom: 1rem;
     flex-wrap: wrap;
 }
+
 .nav button {
     background: none;
     border: none;
@@ -91,13 +113,16 @@ h1 {
     padding: 0;
     transition: color 0.2s;
 }
+
 .nav button:hover, .nav button.active {
     color: var(--accent);
 }
+
 .nav button::before {
     content: "./";
     color: var(--text-muted);
 }
+
 .nav button.active::before {
     color: var(--accent);
 }
@@ -106,9 +131,11 @@ h1 {
     display: none;
     animation: fadeIn 0.2s ease-in;
 }
+
 .section.active {
     display: block;
 }
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(5px); }
     to { opacity: 1; transform: translateY(0); }
@@ -117,6 +144,7 @@ h1 {
 .item {
     margin-bottom: 2rem;
 }
+
 .item-header {
     display: flex;
     justify-content: space-between;
@@ -125,27 +153,33 @@ h1 {
     margin-bottom: 0.5rem;
     padding-bottom: 0.2rem;
 }
+
 .item-title {
     color: #fff;
     font-size: 1.1rem;
 }
+
 .item-date {
     color: var(--accent);
     font-size: 0.9rem;
 }
+
 .item-subtitle {
     color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
+
 ul {
     padding-left: 1.2rem;
     margin: 0;
     color: var(--text-main);
 }
+
 li {
     margin-bottom: 0.4rem;
 }
+
 li::marker {
     color: var(--accent);
     content: "> ";
@@ -157,6 +191,7 @@ li::marker {
     gap: 1rem;
     margin-top: 1.5rem;
 }
+
 .tag {
     background: #111;
     border: 1px solid #333;
@@ -166,6 +201,7 @@ li::marker {
     text-align: center;
     transition: all 0.2s ease;
 }
+
 .tag:hover {
     border-color: var(--accent);
     color: var(--accent);
@@ -178,6 +214,7 @@ li::marker {
     gap: 0.5rem;
     margin-top: 0.8rem;
 }
+
 .project-tag {
     background: #151515;
     color: var(--accent);
@@ -192,6 +229,7 @@ a {
     text-decoration: none;
     border-bottom: 1px solid #333;
 }
+
 a:hover {
     color: var(--accent);
     border-bottom-color: var(--accent);
@@ -214,6 +252,7 @@ a:hover {
     transition: transform 0.2s;
     z-index: 1000;
 }
+
 #chat-toggle:hover {
     transform: translateY(-3px);
 }
@@ -257,6 +296,7 @@ a:hover {
     font-size: 1.2rem;
     cursor: pointer;
 }
+
 #close-chat:hover {
     color: #fff;
 }
@@ -270,9 +310,6 @@ a:hover {
     gap: 10px;
     -ms-overflow-style: none;
     scrollbar-width: none;
-}
-#chat-body::-webkit-scrollbar {
-    display: none;
 }
 
 .message {
@@ -315,6 +352,7 @@ a:hover {
     border-radius: 4px;
     outline: none;
 }
+
 #chat-input:focus {
     border-color: var(--accent);
 }
@@ -330,6 +368,7 @@ a:hover {
     border-radius: 4px;
     transition: all 0.2s;
 }
+
 #send-btn:hover {
     background-color: var(--accent);
     color: #000;
