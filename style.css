@@ -263,6 +263,8 @@ a:hover {
     right: 20px;
     width: 320px;
     height: 400px;
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 100px);
     background-color: #111;
     border: 1px solid #333;
     border-radius: 8px;
